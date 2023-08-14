@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="./game.css">
+  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+  <script defer src="../../js/firebase.js"></script>
+  <script defer src="../../js/auth-guard.js"></script>
+  <script defer src="./game.js"></script>
+
+  <title>Memory Game</title>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="player"></span>
+      <span>Tempo: <span class="timer">00</span></span>
+      <span class="log-out" onclick="logOut()">Sair</span>
+    </header>
+
+    <div class="grid"></div>
+    <form class="game-form">
+      <button class="ranking-button">Ver ranking</button>
+      <button class="new-game-button">Jogar Novamente</button>
+    </form>
+  </main>
+</body>
+</html>
