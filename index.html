@@ -1,95 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/reset.css">
-  <script defer src="./js/validations.js"></script>
-  <script defer src="./js/loading.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-  <script defer src="./js/firebase.js"></script>
-  <script defer src="./js/login.js"></script>
-  <title>Memory Game | Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <script defer src="js/open-modal.js"></script>
+    <script defer src="js/login.js"></script>
+    <title>Document</title>
 </head>
-<body class="centralize">
-  <form class="form">
-    <div class="login-header">
-      <img src="./images/brain.png" alt="Brain Icon">
-      <h1>Memory Game</h1>
-    </div>
-    <div class="form-field">
-
-      <div>
-        <label>Email</label>
-      </div>
-
-      <input 
-      class="login-input"
-      type="email" 
-      name="email"
-      placeholder="seu@email.com"
-      id="email" 
-      onchange="onChangeEmail()"
-      >
-      <div class="error" id="email-required-error">Email é obrigatório</div>
-      <div class="error" id="email-invalid-error">Email é inválido</div>
-    </div>
-    <div class="form-field">
-      <div>
-        <label>Senha</label>
-      </div>
-      <input 
-      class="login-input"
-      type="password" 
-      name="password" 
-      placeholder="Senha"
-      id="password" 
-      onchange="onChangePassword()"
-      >
-      <img 
-      class="see-password-img" 
-      src="./images/olho-fechado.svg"
-      id="see-password-img"
-      onclick="seePassword()"
-      >
-      <div class="error" id="password-required-error">Senha é obrigatória</div>
-    </div>
-    <div class="form-buttons">
-      <div>
-        <button
-        type="button" 
-        class="clear" 
-        id="recover-password-button" 
-        onclick="recoverPassword()" 
-        disabled
-        >
-        Recuperar senha</button>
+<body>
+    <header>
+        <div class="logo">
+          <a href="index.html">
+            <h1>Erick Games</h1>
+            <img src="/images/game-logo.svg" alt="">
+          </a>
+          
         </div>
-      <div>
-        <button 
-        type="button" 
-        class="solid" 
-        id="login-button" 
-        onclick="login()" 
-        disabled
-        >
-        Entrar</button>
-      </div>
-      <div>
-        <button 
-        type="button" 
-        class="outline"
-        id="botao-login" 
-        onclick="register()" 
-        >
-        Registrar</button>
-      </div>
-    </div>
-    
-  </form>
+        
+        <div>
+            <button class="sign-in-button" role="button">Sign In</button>
+            <button class="sign-up-button" role="button">Sign Up</button>
+        </div>
+    </header>
+      <dialog class="sign-in-modal">
+          <form class="form">
+              <div class="login-header">
+                <img src="/images/game-logo.svg" alt="Logo Icon">
+                <h1>Erick Games</h1>
+              </div>
+              <div class="form-field">
 
+                <div>
+                  <label>Email</label>
+                </div>
+          
+                <input 
+                class="login-input"
+                type="email" 
+                name="email"
+                placeholder="seu@email.com"
+                id="email" 
+                onchange="onChangeEmail()"
+                >
+                <div class="error" id="email-required-error">Email é obrigatório</div>
+                <div class="error" id="email-invalid-error">Email é inválido</div>
+              </div>
+              <div class="form-field">
+                <div>
+                  <label>Senha</label>
+                </div>
+                <input 
+                class="login-input"
+                type="password" 
+                name="password" 
+                placeholder="Senha"
+                id="password" 
+                onchange="onChangePassword()"
+                >
+                <img 
+                class="see-password-img" 
+                src="./images/olho-fechado.svg"
+                id="see-password-img"
+                onclick="seePassword()"
+                >
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+              </div>
+              <div class="form-buttons">
+                <div>
+                  <button
+                  type="button" 
+                  class="clear" 
+                  id="recover-password-button" 
+                  onclick="recoverPassword()" 
+                  disabled
+                  >
+                  Recuperar senha</button>
+                  </div>
+                <div>
+                  <button 
+                  type="button" 
+                  class="solid" 
+                  id="login-button" 
+                  onclick="login()" 
+                  disabled
+                  >
+                  Entrar</button>
+                </div>
+                <div>
+                  <button 
+                  type="button" 
+                  class="outline"
+                  id="botao-login" 
+                  onclick="register()" 
+                  >
+                  Registrar</button>
+                </div>
+                <div>
+                  <button
+                  type="button"
+                  class="buttonInClose"
+                  id="escape-button"
+                  >
+                Voltar</button>
+                </div>
+              </div>
+              
+          </form>
+      </dialog>
+
+      <dialog class="sign-up-modal">
+        <form class="form">
+
+          <div class="login-header">
+            <img src="/images/game-logo.svg" alt="Logo Icon">
+            <h1>Erick Games</h1>
+          </div>
+
+          <div class="form-field">
+              <div><label>Email</label></div>
+              <input 
+              class="login-input" 
+              type="email" 
+              placeholder="seu@email.com" 
+              id="email" 
+              onchange="onChangeEmail()">
+              <div class="error" id="email-required-error">Email é obrigatório</div>
+              <div class="error" id="email-invalid-error">Email é inválido</div>
+          </div>
+          <div class="form-field">
+              <div><label>Senha</label></div>
+              <input 
+              class="login-input" 
+              type="password" 
+              placeholder="Senha" 
+              id="password" 
+              onchange="onChangePassword()">
+              <div class="error" id="password-required-error">Senha é obrigatória</div>
+              <div class="error" id="password-min-length-error">Senha deve conter pelo menos 6 caracteres</div>
+          </div>
+          <div class="form-field">
+              <div><label>Confirmar Senha</label></div>
+              <input 
+              class="login-input" 
+              type="password" 
+              placeholder="Confirmar Senha" 
+              id="confirmPassword" 
+              onchange="onChangeConfirmPassword()">
+              <div class="error" id="password-doesnt-match-error">Senha e Confirmar senha devem ser iguais</div>
+          </div>
+          <div class="form-buttons">
+            <div>
+                <button 
+                type="button" 
+                class="solid" 
+                id="register-button"
+                onclick="register()"
+                disabled 
+                >
+                Registrar</button>
+            </div>
+            <div>
+                <button 
+                onclick="goToLogin()" 
+                type="button" 
+                class="clear">
+                Login</button>
+            </div>
+            <div>
+              <button
+              type="button"
+              class="buttonUpClose"
+              id="escape-button"
+              >
+            Voltar</button>
+            </div>
+          </div>
+        </form>
+      </dialog>
+    
 </body>
 </html>
