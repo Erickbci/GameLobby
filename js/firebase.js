@@ -1,10 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBwLLJqhxioPvbW8kwdm1EQewjsXzsp_YQ",
-    authDomain: "rick-and-morty-memory-ga-eccac.firebaseapp.com",
-    databaseURL: "https://rick-and-morty-memory-ga-eccac-default-rtdb.firebaseio.com",
-    projectId: "rick-and-morty-memory-ga-eccac",
-    storageBucket: "rick-and-morty-memory-ga-eccac.appspot.com",
-    messagingSenderId: "470515209663",
-    appId: "1:470515209663:web:933e9ca3f011baf2cbfd0a"
+  apiKey: "AIzaSyAZWUKsKkBbCbUYAkmedfpuR-y0DKRyYTs",
+  authDomain: "game-lobby-6413e.firebaseapp.com",
+  projectId: "game-lobby-6413e",
+  storageBucket: "game-lobby-6413e.appspot.com",
+  messagingSenderId: "226028028699",
+  appId: "1:226028028699:web:90993d36ae6fb58d0449be"
 };
 firebase.initializeApp(firebaseConfig);
