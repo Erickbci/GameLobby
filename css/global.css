@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #835AFD;
-}
+} */
 
 input, button {
   padding: 10px;
@@ -117,7 +117,7 @@ button:active {
 }
 
 .outline {
-  background: transparent;
+  background-color: #ee665c;
   color: white;
   border: 1px solid white;
 }

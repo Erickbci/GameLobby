@@ -3,6 +3,30 @@ body {
     width: 100vw;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+dialog {
+  margin: 25px 0px 25px 0px;
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem rgb( 0 0 0 / .3);
+  width: 26%;
+  height: 90%;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+dialog::backdrop {
+  background-color: rgb( 0 0 0 / .3);
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -32,9 +56,8 @@ h1 {
     transform: translateY(-2px);
 }
 
-button {
+.sign-in-button, .sign-up-button {
   appearance: none;
-  background-color: transparent;
   border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
@@ -58,11 +81,11 @@ button {
   will-change: transform;
 }
 
-button:disabled {
+.sign-in-button:disabled, .sign-up-button:disabled {
   pointer-events: none;
 }
 
-button:active {
+.sign-in-button:active, .sign-up-button:active {
   box-shadow: none;
   transform: translateY(0);
 }
