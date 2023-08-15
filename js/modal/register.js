@@ -81,18 +81,14 @@ function isFormValid() {
     return true;
 }
 
-function goToLogin() {
-    window.location.href = '../../index.html';
-}
-
 const form = {
+    email: () => document.getElementById('s-u-email'),
+    emailInvalidError: () => document.getElementById('s-u-email-invalid-error'),
+    emailRequiredError: () => document.getElementById('s-u-email-required-error'),
+    registerButton: () => document.getElementById('register-button'),
+    password: () => document.getElementById('s-u-password'),
+    passwordRequiredError: () => document.getElementById('s-u-password-required-error'),
     confirmPassword: () => document.getElementById('confirmPassword'),
     confirmPasswordDoesntMatchError: () => document.getElementById('password-doesnt-match-error'),
-    email: () => document.getElementById('email'),
-    emailInvalidError: () => document.getElementById('email-invalid-error'),
-    emailRequiredError: () => document.getElementById('email-required-error'),
-    password: () => document.getElementById('password'),
     passwordMinLengthError: () => document.getElementById('password-min-length-error'),
-    passwordRequiredError: () => document.getElementById('password-required-error'),
-    registerButton: () => document.getElementById('register-button'),
 }

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
-    <script defer src="./js/open-modal.js"></script>
     <script defer src="./js/validations.js"></script>
+    <script defer src="./js/modal/open-modal.js"></script>
     <script defer src="./js/loading.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
     <script defer src="./js/firebase.js"></script>
-    <script defer src="./js/login.js"></script>
+    <script defer src="./js/routes/route-modal.js"></script>
+    <script defer src="./js/modal/register.js"></script>
+    <script defer src="./js/modal/login.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -45,11 +47,11 @@
                 type="email" 
                 name="email"
                 placeholder="seu@email.com"
-                id="email" 
+                id="s-i-email" 
                 onchange="onChangeEmail()"
                 >
-                <div class="error" id="email-required-error">Email é obrigatório</div>
-                <div class="error" id="email-invalid-error">Email é inválido</div>
+                <div class="error" id="s-i-email-required-error">Email é obrigatório</div>
+                <div class="error" id="s-i-email-invalid-error">Email é inválido</div>
               </div>
               <div class="form-field">
                 <div>
@@ -60,7 +62,7 @@
                 type="password" 
                 name="password" 
                 placeholder="Senha"
-                id="password" 
+                id="s-i-password" 
                 onchange="onChangePassword()"
                 >
                 <img 
@@ -69,7 +71,7 @@
                 id="see-password-img"
                 onclick="seePassword()"
                 >
-                <div class="error" id="password-required-error">Senha é obrigatória</div>
+                <div class="error" id="s-i-password-required-error">Senha é obrigatória</div>
               </div>
               <div class="form-buttons">
                 <div>
@@ -97,7 +99,7 @@
                   type="button" 
                   class="outline"
                   id="botao-login" 
-                  onclick="register()" 
+                  onclick="openSignUpModal()" 
                   >
                   Registrar</button>
                 </div>
@@ -128,10 +130,10 @@
               class="login-input" 
               type="email" 
               placeholder="seu@email.com" 
-              id="email" 
+              id="s-u-email" 
               onchange="onChangeEmail()">
-              <div class="error" id="email-required-error">Email é obrigatório</div>
-              <div class="error" id="email-invalid-error">Email é inválido</div>
+              <div class="error" id="s-u-email-required-error">Email é obrigatório</div>
+              <div class="error" id="s-u-email-invalid-error">Email é inválido</div>
           </div>
           <div class="form-field">
               <div><label>Senha</label></div>
@@ -139,9 +141,9 @@
               class="login-input" 
               type="password" 
               placeholder="Senha" 
-              id="password" 
+              id="s-u-password" 
               onchange="onChangePassword()">
-              <div class="error" id="password-required-error">Senha é obrigatória</div>
+              <div class="error" id="s-u-password-required-error">Senha é obrigatória</div>
               <div class="error" id="password-min-length-error">Senha deve conter pelo menos 6 caracteres</div>
           </div>
           <div class="form-field">
@@ -167,7 +169,7 @@
             </div>
             <div>
                 <button 
-                onclick="goToLogin()" 
+                onclick="openSignInModal()" 
                 type="button" 
                 class="clear">
                 Login</button>

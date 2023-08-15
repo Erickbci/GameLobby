@@ -37,10 +37,6 @@ function getErrorMessages(error){
   return error.message;
 }
 
-function register(){
-  window.location.href = 'pages/register/register.html' 
-}
-
 function recoverPassword() {
   showLoading();
   firebase.auth().sendPasswordResetEmail(
@@ -103,12 +99,12 @@ function seePassword() {
 
 
 const form = {
-  email: () => document.getElementById('email'),
-  emailInvalidError: () => document.getElementById('email-invalid-error'),
-  emailRequiredError: () => document.getElementById('email-required-error'),
+  email: () => document.getElementById('s-i-email'),
+  emailInvalidError: () => document.getElementById('s-i-email-invalid-error'),
+  emailRequiredError: () => document.getElementById('s-i-email-required-error'),
   loginButton: () => document.getElementById('login-button'),
-  password: () => document.getElementById('password'),
-  passwordRequiredError: () => document.getElementById('password-required-error'),
+  password: () => document.getElementById('s-i-password'),
+  passwordRequiredError: () => document.getElementById('s-i-password-required-error'),
   recoverPassword: () => document.getElementById('recover-password-button'),
   seePasswordImage: () => document.getElementById('see-password-img')
 }
