@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINKS -->
     <link rel="stylesheet" href="/css/index.css">
-    <script defer src="./js/validations.js"></script>
+    <link rel="stylesheet" href="/css/header/header.css">
+    <link rel="stylesheet" href="/css/modal/modal.css">
+
+    <!-- JS SCR -->
+    <script defer src="./js/validations/validations.js"></script>
     <script defer src="./js/modal/open-modal.js"></script>
     <script defer src="./js/loading.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-    <script defer src="./js/firebase.js"></script>
+    <script defer src="./js/firebase/firebase.js"></script>
     <script defer src="./js/routes/route-modal.js"></script>
-    <script defer src="./js/modal/register.js"></script>
     <script defer src="./js/modal/login.js"></script>
-    <title>Document</title>
+    <script defer src="./js/modal/register.js"></script>
+    <title>Game Lobby</title>
 </head>
 <body>
     <header>
@@ -30,7 +35,8 @@
             <button class="sign-up-button" role="button">Sign Up</button>
         </div>
     </header>
-      <dialog class="sign-in-modal">
+
+    <dialog class="sign-in-modal">
           <form class="form">
               <div class="login-header">
                 <img src="/images/game-logo.svg" alt="Logo Icon">
@@ -114,9 +120,9 @@
               </div>
               
           </form>
-      </dialog>
+    </dialog>
 
-      <dialog class="sign-up-modal">
+    <dialog class="sign-up-modal">
         <form class="form">
 
           <div class="login-header">
@@ -184,7 +190,11 @@
             </div>
           </div>
         </form>
-      </dialog>
+    </dialog>
+
+    <main>
+      
+    </main>
     
 </body>
 </html>
