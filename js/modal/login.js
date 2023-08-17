@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
-    window.location.href = 'pages/game/game.html';
+    window.location.href = 'pages/rickAndMortyGame/index.html';
   }
 })
 
@@ -20,7 +20,7 @@ function login(){
     form.email().value, form.password().value
   ).then(response => {
     hideLoading();
-    window.location.href = 'pages/game/game.html'
+    window.location.href = 'pages/rickAndMortyGame/index.html'
   }).catch(error => {
     hideLoading();
     alert(getErrorMessages(error))

@@ -1,0 +1,160 @@
+dialog {
+    margin: 0;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
+  
+    width: 320px;
+    height: 600px;
+    padding-top: 50px;
+  
+    position: relative;
+    top: 18%;
+    left: 41%;
+  }
+  
+  dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.3);
+  }
+  
+  dialog form {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  dialog input {
+    border: none;
+  }
+  
+  .form-field label {
+    padding: 10px;
+  }
+  
+   
+  dialog input, dialog button {
+    padding: 10px;
+    width: -webkit-fill-available;
+  }
+  
+  dialog button {
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+    padding: 15px;
+    border-radius: 8px;
+    /* font-size: 1em;  */
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  dialog button:active {
+    opacity: 0.8;
+  }
+  
+  .see-password-img {
+    cursor: pointer;
+    margin-top: 30px;
+    /* margin-right: 8px; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+  }
+  
+  .form-field {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .form-field label {
+    padding: 5px;
+  }
+  
+  .form-buttons {
+    margin: 25px 0 0 15px;
+  }
+  
+  .loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .loading label {
+    font-size: 24px;
+  }
+  
+  .centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-input {
+    margin-top: 5px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #333;
+    /* font-size: 1em; */
+    width: 100%;
+    outline: none;
+  }
+  
+  .login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 50px; */
+  }
+  
+    .login-header img {
+      width: 70px;
+  } 
+  
+   .login-header h1 {
+    /* color: #333; */
+    font-size: 1.5rem;
+  } 
+  
+  .clear {
+    background-color: #ee665c;
+    border: none;
+    color: white;
+  }
+  .clear:disabled {
+    border: none;
+    color: #FFF;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .solid {
+    background-color: #ee665c;
+    border: none;
+    color: white;
+  }
+  
+  .solid:disabled {
+    border: none;
+    color: #FFF;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .outline {
+    background: #ee665c;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .error {
+    padding-top: 10px;
+    padding-left: 12px;
+    color: #ee665c;
+    display: none;
+  }
