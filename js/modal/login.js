@@ -17,7 +17,7 @@ function loginOnChangePassword() {
 function login(){
   showLoading();
   firebase.auth().signInWithEmailAndPassword(
-    form.email().value, form.password().value
+    formRegister.email().value, formRegister.password().value
   ).then(response => {
     hideLoading();
     window.location.href = 'pages/rickAndMortyGame/index.html'
@@ -40,7 +40,7 @@ function getErrorMessages(error){
 function recoverPassword() {
   showLoading();
   firebase.auth().sendPasswordResetEmail(
-    form.email().value
+    formRegister.email().value
     ).then(() => {
       hideLoading();
       alert('Email enviado com sucesso')
@@ -51,7 +51,7 @@ function recoverPassword() {
 }
 
 function isEmailValid() {
-  const email = form.email().value
+  const email = formRegister.email().value
   if (!email) {
     return false;
   }
@@ -59,26 +59,26 @@ function isEmailValid() {
 }
 
 function toggleEmailErrors() {
-  const email = form.email().value
-  form.emailRequiredError().style.display = email ? 'none' : 'block';
-  form.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
+  const email = formRegister.email().value
+  formRegister.emailRequiredError().style.display = email ? 'none' : 'block';
+  formRegister.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
 }
 
 function togglePasswordError() {
-  const password = form.password().value;
-  form.passwordRequiredError().style.display = password ? 'none' : 'block';
+  const password = formRegister.password().value;
+  formRegister.passwordRequiredError().style.display = password ? 'none' : 'block';
 }
 
 function toggleButtonsDisable() {
   const emailValid = isEmailValid();
-  form.recoverPassword().disabled = !emailValid;
+  formRegister.recoverPassword().disabled = !emailValid;
 
   const passwordValid = isPasswordValid();
-  form.loginButton().disabled = !emailValid || !passwordValid;
+  formRegister.loginButton().disabled = !emailValid || !passwordValid;
 }
 
 function isPasswordValid() {
-  const password = form.password().value
+  const password = formRegister.password().value
   if (!password) {
     return false;
   }
@@ -86,19 +86,19 @@ function isPasswordValid() {
 }
 
 function seePassword() {
-  if (form.password().type === 'password') {
-    form.password().type = 'text';
-    form.seePasswordImage().setAttribute('src', './images/olho.svg');   
+  if (formRegister.password().type === 'password') {
+    formRegister.password().type = 'text';
+    formRegister.seePasswordImage().setAttribute('src', './images/olho.svg');   
     return;
   } else {
-    form.password().type = 'password';
-    form.seePasswordImage().setAttribute('src', './images/olho-fechado.svg');
+    formRegister.password().type = 'password';
+    formRegister.seePasswordImage().setAttribute('src', './images/olho-fechado.svg');
   } 
 
 }
 
 
-const form = {
+const formRegister = {
   email: () => document.getElementById('s-i-email'),
   emailInvalidError: () => document.getElementById('s-i-email-invalid-error'),
   emailRequiredError: () => document.getElementById('s-i-email-required-error'),

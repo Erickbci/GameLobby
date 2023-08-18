@@ -5,18 +5,18 @@ firebase.auth().onAuthStateChanged(user => {
   })
 
 function registerOnChangeEmail() {
-    const email = form.email().value;
-    form.emailRequiredError().style.display = email ? 'none' : 'block';
+    const email = registerForm.email().value;
+    registerForm.emailRequiredError().style.display = email ? 'none' : 'block';
 
-    form.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
+    registerForm.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
     toggleRegisterButtonDisable()
 }
 
 function registerOnChangePassword() {
-    const password = form.password().value;
-    form.passwordRequiredError().style.display = password ? 'none' : 'block';
+    const password = registerForm.password().value;
+    registerForm.passwordRequiredError().style.display = password ? 'none' : 'block';
 
-    form.passwordMinLengthError().style.display = password.length >= 6 ? 'none' : 'block';
+    registerForm.passwordMinLengthError().style.display = password.length >= 6 ? 'none' : 'block';
 
     validatePasswordsMatch();
     toggleRegisterButtonDisable();
@@ -30,8 +30,8 @@ function onChangeConfirmPassword() {
 function register() {
     showLoading();
 
-    const email = form.email().value;
-    const password = form.password().value;
+    const email = registerForm.email().value;
+    const password = registerForm.password().value;
     firebase.auth().createUserWithEmailAndPassword(
         email, password
         ).then(() => {
@@ -51,29 +51,29 @@ function getErrorMessage(error) {
 }
 
 function validatePasswordsMatch() {
-    const password = form.password().value;
-    const confirmPassword = form.confirmPassword().value;
+    const password = registerForm.password().value;
+    const confirmPassword = registerForm.confirmPassword().value;
 
-    form.confirmPasswordDoesntMatchError().style.display = 
+    registerForm.confirmPasswordDoesntMatchError().style.display = 
     password == confirmPassword ? 'none' : 'block'
 }
 
 function toggleRegisterButtonDisable() {
-    form.registerButton().disabled = !isFormValid();
+    registerForm.registerButton().disabled = !isregisterFormValid();
 }
 
-function isFormValid() {
-    const email = form.email().value;
+function isregisterFormValid() {
+    const email = registerForm.email().value;
     if (!email || !validateEmail(email)) {
         return false;
     }
 
-    const password = form.password().value;
+    const password = registerForm.password().value;
     if (!password || password.length < 6){
         return false;
     }
 
-    const confirmPassword = form.confirmPassword().value;
+    const confirmPassword = registerForm.confirmPassword().value;
     if (password != confirmPassword) {
         return false;
     }
@@ -81,7 +81,7 @@ function isFormValid() {
     return true;
 }
 
-const form = {
+const registerForm = {
     email: () => document.getElementById('s-u-email'),
     emailInvalidError: () => document.getElementById('s-u-email-invalid-error'),
     emailRequiredError: () => document.getElementById('s-u-email-required-error'),
