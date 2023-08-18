@@ -17,7 +17,7 @@ function loginOnChangePassword() {
 function login(){
   showLoading();
   firebase.auth().signInWithEmailAndPassword(
-    formRegister.email().value, formRegister.password().value
+    loginForm.email().value, loginForm.password().value
   ).then(response => {
     hideLoading();
     window.location.href = 'pages/rickAndMortyGame/index.html'
@@ -40,7 +40,7 @@ function getErrorMessages(error){
 function recoverPassword() {
   showLoading();
   firebase.auth().sendPasswordResetEmail(
-    formRegister.email().value
+    loginForm.email().value
     ).then(() => {
       hideLoading();
       alert('Email enviado com sucesso')
@@ -51,7 +51,7 @@ function recoverPassword() {
 }
 
 function isEmailValid() {
-  const email = formRegister.email().value
+  const email = loginForm.email().value
   if (!email) {
     return false;
   }
@@ -59,26 +59,26 @@ function isEmailValid() {
 }
 
 function toggleEmailErrors() {
-  const email = formRegister.email().value
-  formRegister.emailRequiredError().style.display = email ? 'none' : 'block';
-  formRegister.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
+  const email = loginForm.email().value
+  loginForm.emailRequiredError().style.display = email ? 'none' : 'block';
+  loginForm.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
 }
 
 function togglePasswordError() {
-  const password = formRegister.password().value;
-  formRegister.passwordRequiredError().style.display = password ? 'none' : 'block';
+  const password = loginForm.password().value;
+  loginForm.passwordRequiredError().style.display = password ? 'none' : 'block';
 }
 
 function toggleButtonsDisable() {
   const emailValid = isEmailValid();
-  formRegister.recoverPassword().disabled = !emailValid;
+  loginForm.recoverPassword().disabled = !emailValid;
 
   const passwordValid = isPasswordValid();
-  formRegister.loginButton().disabled = !emailValid || !passwordValid;
+  loginForm.loginButton().disabled = !emailValid || !passwordValid;
 }
 
 function isPasswordValid() {
-  const password = formRegister.password().value
+  const password = loginForm.password().value
   if (!password) {
     return false;
   }
@@ -86,19 +86,19 @@ function isPasswordValid() {
 }
 
 function seePassword() {
-  if (formRegister.password().type === 'password') {
-    formRegister.password().type = 'text';
-    formRegister.seePasswordImage().setAttribute('src', './images/olho.svg');   
+  if (loginForm.password().type === 'password') {
+    loginForm.password().type = 'text';
+    loginForm.seePasswordImage().setAttribute('src', './images/olho.svg');   
     return;
   } else {
-    formRegister.password().type = 'password';
-    formRegister.seePasswordImage().setAttribute('src', './images/olho-fechado.svg');
+    loginForm.password().type = 'password';
+    loginForm.seePasswordImage().setAttribute('src', './images/olho-fechado.svg');
   } 
 
 }
 
 
-const formRegister = {
+const loginForm = {
   email: () => document.getElementById('s-i-email'),
   emailInvalidError: () => document.getElementById('s-i-email-invalid-error'),
   emailRequiredError: () => document.getElementById('s-i-email-required-error'),
