@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(user => {
     }
   })
 
-function onChangeEmail() {
+function registerOnChangeEmail() {
     const email = form.email().value;
     form.emailRequiredError().style.display = email ? 'none' : 'block';
 
@@ -12,7 +12,7 @@ function onChangeEmail() {
     toggleRegisterButtonDisable()
 }
 
-function onChangePassword() {
+function registerOnChangePassword() {
     const password = form.password().value;
     form.passwordRequiredError().style.display = password ? 'none' : 'block';
 

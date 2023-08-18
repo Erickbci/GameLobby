@@ -54,7 +54,7 @@
                 name="email"
                 placeholder="seu@email.com"
                 id="s-i-email" 
-                onchange="onChangeEmail()"
+                onchange="registerOnChangeEmail()"
                 >
                 <div class="error" id="s-i-email-required-error">Email é obrigatório</div>
                 <div class="error" id="s-i-email-invalid-error">Email é inválido</div>
@@ -69,7 +69,7 @@
                 name="password" 
                 placeholder="Senha"
                 id="s-i-password" 
-                onchange="onChangePassword()"
+                onchange="loginOnChangePassword()"
                 >
                 <img 
                 class="see-password-img" 
@@ -137,7 +137,7 @@
               type="email" 
               placeholder="seu@email.com" 
               id="s-u-email" 
-              onchange="onChangeEmail()">
+              onchange="registerOnChangeEmail()">
               <div class="error" id="s-u-email-required-error">Email é obrigatório</div>
               <div class="error" id="s-u-email-invalid-error">Email é inválido</div>
           </div>
@@ -148,7 +148,7 @@
               type="password" 
               placeholder="Senha" 
               id="s-u-password" 
-              onchange="onChangePassword()">
+              onchange="registerOnChangePassword()">
               <div class="error" id="s-u-password-required-error">Senha é obrigatória</div>
               <div class="error" id="password-min-length-error">Senha deve conter pelo menos 6 caracteres</div>
           </div>
