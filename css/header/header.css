@@ -5,7 +5,7 @@ header {
   
     padding: 15px 15px 10px 15px;
   
-    border-bottom: 2px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
   }
   
   .logo a {
@@ -22,6 +22,7 @@ header {
   h1 {
     margin: 10px 15px 5px 10px;
     color: #1a1a1a;
+    font-weight: 300;
   }
   
   .sign-in-button {
@@ -48,7 +49,7 @@ header {
   .sign-in-button,
   .sign-up-button {
     appearance: none;
-    border: 2px solid #1a1a1a;
+    border: 1px solid #1a1a1a;
     border-radius: 15px;
     box-sizing: border-box;
     cursor: pointer;
