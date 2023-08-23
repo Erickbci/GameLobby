@@ -1,8 +1,8 @@
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      window.location.href = '../game/game.html';
-    }
-  })
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//       window.location.href = '../game/game.html';
+//     }
+//   })
 
 function registerOnChangeEmail() {
     const email = registerForm.email().value;
