@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/modal/modal.css">
     <link rel="stylesheet" href="/css/footer/footer.css">
     <link rel="stylesheet" href="/css/main/main.css">
+    <link rel="stylesheet" href="/css/slider/slider.css">
 
     <!-- JS SCR -->
     <script defer src="./js/validations/validations.js"></script>
@@ -195,21 +196,129 @@
     </dialog>
 
     <main>
-      <div class="content">
+      <div class="container">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+
         <div class="cards">
-          <div class="game-card">
-            <img src="./images/among.jpg" alt="Imagem do jogo">
-          </div>
-    
-          <div class="game-card">
-            <img src="./images/rick.jpg" alt="Imagem do jogo">
-          </div>
-    
-          <div class="game-card">
-            <img src="./images/csgo.png" alt="Imagem do jogo">
-          </div>
+
+            <label for="s1" id="slide1">
+                
+                <div class="card">
+
+                    <div class="image">
+                        <img src="/images/among.jpg" alt="among">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="infos">
+                        <span class="name">Among Us</span>
+                        <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio autem eaque.</span>
+
+                        <a href="/game" class="btn-details">Jogue agora</a>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s2" id="slide2">
+                
+                <div class="card">
+
+                    <div class="image">
+                        <img src="/images/csgo.png" alt="csgo">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="infos">
+                        <span class="name">CSGO</span>
+                        <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio autem eaque.</span>
+
+                        <a href="/game" class="btn-details">Jogue agora</a>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s3" id="slide3">
+                
+                <div class="card">
+
+                    <div class="image">
+                        <img src="/images/rick.jpg" alt="rick">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="infos">
+                        <span class="name">Rick & Morty</span>
+                        <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio autem eaque.</span>
+
+                        <a href="/game" class="btn-details">Jogue agora</a>
+
+                    </div>
+                </div>
+            </label>
+
+            <label for="s4" id="slide4">
+                
+                <div class="card">
+
+                    <div class="image">
+                        <img src="/images/comingsoon.jpg" alt="comingsoon">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="infos">
+                        <span class="name">Coming Soon</span>
+                        <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio autem eaque.</span>
+
+                        <a href="/game" class="btn-details">Jogue agora</a>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s5" id="slide5">
+                
+                <div class="card">
+
+                    <div class="image">
+                        <img src="/images/comingsoon.jpg" alt="comingsoon">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="infos">
+                        <span class="name">Coming Soon</span>
+                        <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio autem eaque.</span>
+
+                        <a href="/game" class="btn-details">Jogue agora</a>
+                    </div>
+                </div>
+            </label>
+
         </div>
-      </div>
+
+      </div>  
     </main>
 
     <footer>

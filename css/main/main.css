@@ -1,8 +1,11 @@
 main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 80%;
+  justify-content: center;
+  /* background-color: #232533; */
+  overflow-x: hidden;
+  height: 90%;
+
 }
 
 .content {
