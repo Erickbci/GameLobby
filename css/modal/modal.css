@@ -1,11 +1,12 @@
 dialog {
+    background-color: #323444;
     margin: 0;
     border: none;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
   
     width: 320px;
-    height: 600px;
+    height: 500px;
     padding-top: 50px;
   
     position: relative;
@@ -29,6 +30,7 @@ dialog {
   
   .form-field label {
     padding: 10px;
+    color: #FFF;
   }
   
    
@@ -157,4 +159,20 @@ dialog {
     padding-left: 12px;
     color: #ee665c;
     display: none;
+  }
+
+  .span-login {
+    color: #FFF;
+    padding: 10px;
+  }
+
+  .span-login a {
+    color: #ee665c;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .buttonInClose, .buttonUpClose {
+    margin-top: 10px;
   }

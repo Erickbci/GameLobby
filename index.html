@@ -104,13 +104,19 @@
                   Entrar</button>
                 </div>
                 <div>
-                  <button 
+                  <!-- <button 
                   type="button" 
                   class="outline"
                   id="botao-login" 
                   onclick="openSignUpModal()" 
                   >
-                  Registrar</button>
+                  Registrar</button> -->
+                  <span class="span-login">
+                    Não possui uma conta? 
+                    <a onclick="openSignUpModal()">
+                      cadastre-se
+                    </a>
+                  </span>
                 </div>
                 <div>
                   <button
@@ -177,11 +183,12 @@
                 Registrar</button>
             </div>
             <div>
-                <button 
-                onclick="openSignInModal()" 
-                type="button" 
-                class="clear">
-                Login</button>
+              <span class="span-login">
+                Já possui uma conta? 
+                <a onclick="openSignInModal()">
+                  entre aqui
+                </a>
+              </span>
             </div>
             <div>
               <button

@@ -7,6 +7,20 @@ const buttonUpClose = document.querySelector('.buttonUpClose');
 
 const slider = document.querySelector('.container')
 
+signInModal.addEventListener('click', function(e) {
+  if (e.target == this) {
+    signInModal.close()
+    slider.style.display = 'flex'
+  };
+});
+
+signUpModal.addEventListener('click', function(e) {
+  if (e.target == this) {
+    signUpModal.close()
+    slider.style.display = 'flex'
+  };
+});
+
 signInButton.onclick = function () {
     signInModal.showModal()
     slider.style.display = 'none'
