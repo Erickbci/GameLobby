@@ -17,14 +17,6 @@ const characters = [
   'scroopy',
 ];
 
-function logOut() {
-  firebase.auth().signOut().then(() => {
-      window.location.href = '../../index.html';
-  }).catch(() => {
-      alert('Erro ao fazer logout')
-  })
-}
-
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
   element.className = className;

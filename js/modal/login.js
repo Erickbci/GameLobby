@@ -1,8 +1,8 @@
-// firebase.auth().onAuthStateChanged(user => {
-//   if (user) {
-//     window.location.href = '../../index.html';
-//   }
-// })
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    connectedUserSettings();
+  }
+})  
 
 function loginOnChangeEmail() {
   toggleButtonsDisable();
@@ -14,28 +14,34 @@ function loginOnChangePassword() {
   togglePasswordError();
 }
 
-function getUserEmail() {
-  firebase.getAuth().getUserByEmail(email)
-  .then((userRecord) => {
-    console.log(userRecord.toJSON());
-  })
-  .catch((error) => {
-    console.log(error);
+function logOut() {
+  firebase.auth().signOut().then(() => {
+      window.location.href = '../../index.html';
+  }).catch(() => {
+      alert('Erro ao fazer logout')
   })
 }
 
 function connectedUserSettings() {
+  const user = firebase.auth().currentUser;
   const signInModal = document.querySelector('.sign-in-modal');
   const slider = document.querySelector('.container')
   const headerButtons = document.querySelector('.header-buttons');	
   const connectedUserSettingsDiv = document.querySelector('.connected-user-settings-div');
 
-  signInModal.close()
-  slider.style.display = 'flex'
-  headerButtons.style.display = 'none';
-  connectedUserSettingsDiv.style.display = 'flex'
-
-  getUserEmail()
+  if (user !== null) {
+    user.providerData.forEach((profile) => {
+      const userEmail = profile.email;
+      signInModal.close()
+      slider.style.display = 'flex'
+      headerButtons.style.display = 'none';
+      connectedUserSettingsDiv.style.display = 'flex'
+      connectedUserSettingsDiv.innerHTML = `
+      <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
+      <a onclick="logOut()"><img class="logout-button" src="../../images/logout.svg" /></a>`
+    });
+  }
+  
 }
 
 

@@ -83,3 +83,26 @@ header {
     box-shadow: none;
     transform: translateY(0);
   }
+
+  .connected-user-settings-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .connected-span {
+    color: white;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  .connected-user {
+    color: #ee665c;
+    font-weight: 600;
+  }
+
+  .logout-button {
+    height: 25px;
+    cursor: pointer;
+  }
