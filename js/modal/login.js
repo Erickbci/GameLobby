@@ -38,7 +38,7 @@ function connectedUserSettings() {
       connectedUserSettingsDiv.style.display = 'flex'
       connectedUserSettingsDiv.innerHTML = `
       <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
-      <a onclick="logOut()"><img class="logout-button" src="../../images/logout.svg" /></a>`
+      <a onclick="logOut()"><img class="logout-button icon" src="../../images/logout.svg" /></a>`
     });
   }
   
