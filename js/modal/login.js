@@ -1,8 +1,8 @@
-firebase.auth().onAuthStateChanged(user => {
-  if (user) {
-    window.location.href = 'pages/rickAndMortyGame/index.html';
-  }
-})
+// firebase.auth().onAuthStateChanged(user => {
+//   if (user) {
+//     window.location.href = '../../index.html';
+//   }
+// })
 
 function loginOnChangeEmail() {
   toggleButtonsDisable();
@@ -14,13 +14,39 @@ function loginOnChangePassword() {
   togglePasswordError();
 }
 
+function getUserEmail() {
+  firebase.getAuth().getUserByEmail(email)
+  .then((userRecord) => {
+    console.log(userRecord.toJSON());
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+}
+
+function connectedUserSettings() {
+  const signInModal = document.querySelector('.sign-in-modal');
+  const slider = document.querySelector('.container')
+  const headerButtons = document.querySelector('.header-buttons');	
+  const connectedUserSettingsDiv = document.querySelector('.connected-user-settings-div');
+
+  signInModal.close()
+  slider.style.display = 'flex'
+  headerButtons.style.display = 'none';
+  connectedUserSettingsDiv.style.display = 'flex'
+
+  getUserEmail()
+}
+
+
 function login(){
+  
   showLoading();
   firebase.auth().signInWithEmailAndPassword(
     loginForm.email().value, loginForm.password().value
   ).then(response => {
     hideLoading();
-    window.location.href = 'pages/rickAndMortyGame/index.html'
+    connectedUserSettings()
   }).catch(error => {
     hideLoading();
     alert(getErrorMessages(error))
