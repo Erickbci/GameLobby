@@ -21,6 +21,7 @@
     <script defer src="./js/routes/route-modal.js"></script>
     <script defer src="./js/modal/login.js"></script>
     <script defer src="./js/modal/register.js"></script>
+    <script defer src="./js/modal/logout.js"></script>
     <title>Game Lobby</title>
 </head>
 <body>
@@ -205,6 +206,24 @@
           </div>
         </form>
     </dialog>
+
+    <dialog class="logout-modal">
+      <div>
+
+        <div class="login-header">
+          <img src="/images/game-logo.svg" alt="Logo Icon">
+          <h1>Erick Games</h1>
+        </div>
+
+        <div class="logout-confirm">
+          <span class="logout-span">Deseja sair?</span>
+          <div class="logout-buttons">
+            <button onclick="logOut()" class="confirm-button">Sim</button>
+            <button class="undo-button">Não</button>
+          </div>
+        </div>
+      </div>
+  </dialog>
 
     <main>
       <div class="container">

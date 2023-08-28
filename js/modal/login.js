@@ -14,14 +14,6 @@ function loginOnChangePassword() {
   togglePasswordError();
 }
 
-function logOut() {
-  firebase.auth().signOut().then(() => {
-      window.location.href = '../../index.html';
-  }).catch(() => {
-      alert('Erro ao fazer logout')
-  })
-}
-
 function connectedUserSettings() {
   const user = firebase.auth().currentUser;
   const signInModal = document.querySelector('.sign-in-modal');
@@ -38,7 +30,7 @@ function connectedUserSettings() {
       connectedUserSettingsDiv.style.display = 'flex'
       connectedUserSettingsDiv.innerHTML = `
       <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
-      <a onclick="logOut()"><img class="logout-button icon" src="../../images/logout.svg" /></a>`
+      <a onclick="confirmLogout()"><img class="logout-button icon" src="../../images/logout.svg" /></a>`
     });
   }
   
