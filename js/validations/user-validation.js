@@ -1,28 +1,37 @@
-const cardButton = document.querySelector('#card-button');
-const buttonCsgo = document.querySelector('#buttonCsgo');
-const buttonRick = document.querySelector('#buttonRick');
+const gameButtonAmongUs = document.querySelector('#game-button-among-us');
+const gameButtonCsgo = document.querySelector('#game-button-csgo');
+const gameButtonRickAndMorty = document.querySelector('#game-button-rick-and-morty');
 
-
-cardButton.addEventListener('click', (eve) => {
-    if (eve.target.value === 'amongus') {
-        window.location.href = '../../pages/amongUsGame/index.html';
-    } 
+gameButtonAmongUs.addEventListener('click', (eve) => {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            if (eve.target.value === 'among-us') {
+                window.location.href = '../../pages/amongUsGame/index.html';
+            }
+        } else {
+            alert('Please loggin')
+        }
+    })
 })
-
-buttonCsgo.addEventListener('click', (eve) => {
-    if (eve.target.value === 'counter') {
-        window.location.href = '../../pages/ticTacToe/index.html';
-    } 
+gameButtonCsgo.addEventListener('click', (eve) => {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            if (eve.target.value === 'csgo') {
+                window.location.href = '../../pages/ticTacToe/index.html';
+            }
+        } else {
+            alert('Please loggin')
+        }
+    })
 })
-
-buttonRick.addEventListener('click', (eve) => {
-    if (eve.target.value === 'rickandmorty') {
-        window.location.href = '../../pages/rickAndMortyGame/index.html';
-    } 
+gameButtonRickAndMorty.addEventListener('click', (eve) => {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            if (eve.target.value === 'rick-and-morty') {
+                window.location.href = '../../pages/rickAndMortyGame/index.html';
+            }
+        } else {
+            alert('Please loggin')
+        }
+    })
 })
-
-
-//     // firebase.auth().onAuthStateChanged(user => {
-//     //     if (user) {
-//     //     }
-//     //   })
