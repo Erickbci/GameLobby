@@ -9,7 +9,7 @@ gameButtonAmongUs.addEventListener('click', (eve) => {
                 window.location.href = '../../pages/amongUsGame/index.html';
             }
         } else {
-            alert('Please loggin')
+            askForLogin()
         }
     })
 })

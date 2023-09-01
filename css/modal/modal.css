@@ -29,7 +29,8 @@ dialog {
 
   .sign-in-modal, .sign-up-modal {
     width: 320px;
-    height: 500px;
+    height: 600px;
+    margin-top: 20px;
   }
 
   .logout-modal {
@@ -144,10 +145,16 @@ dialog {
     font-size: 24px;
   }
   
-  .centralize {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .ask-for-login-message  {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .ask-for-login-message span {
+    color: #fad00c;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
   }
   
   .login-input {
@@ -165,6 +172,7 @@ dialog {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     /* margin-bottom: 50px; */
   }
   

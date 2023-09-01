@@ -7,6 +7,15 @@ const buttonUpClose = document.querySelector('.buttonUpClose');
 
 const slider = document.querySelector('.container')
 
+const askForLoginMessage = document.querySelector('.ask-for-login-message');
+
+function askForLogin() {
+  slider.style.display = 'none'
+  askForLoginMessage.style.display = 'block';
+  askForLoginMessage.innerHTML = `<span>Para jogar faça o login</span>`
+  signInModal.showModal()
+}
+
 signInModal.addEventListener('click', function(e) {
   if (e.target == this) {
     signInModal.close()
@@ -40,3 +49,4 @@ buttonUpClose.onclick = function () {
     signUpModal.close()
     slider.style.display = 'flex'
 }
+
