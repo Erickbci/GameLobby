@@ -26,68 +26,6 @@ dialog {
   dialog input {
     border: none;
   }
-
-  .sign-in-modal, .sign-up-modal {
-    width: 320px;
-    height: 600px;
-    margin-top: 20px;
-  }
-
-  .logout-modal {
-    width: 300px;
-    height:250px
-  }
-
-  .logout-confirm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 25px;
-  }
-
-  .logout-span {
-    color: white;
-    font-weight: 20px;
-    margin-bottom: 20px;
-  }
-
-  .logout-buttons {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .logout-buttons button {
-    width: 120px;
-    color: #fff;
-    background-color: #ff8279;
-    border: 1px solid #1a1a1a;
-    font-weight: 600;
-
-    text-decoration: none;
-    
-    transform: translateY(-2px);
-  }
-
-  .logout-buttons button:hover {
-    width: 120px;
-    color: #fff;
-    background-color: #ee665c;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-
-  .logout-buttons button:first-child {
-    margin-right: 15px;
-
-  }
-  
-  .form-field label {
-    padding: 10px;
-    color: #FFF;
-  }
-  
    
   dialog input, dialog button {
     padding: 10px;
@@ -108,6 +46,18 @@ dialog {
   dialog button:active {
     opacity: 0.8;
   }
+
+  .sign-in-modal, .sign-up-modal {
+    width: 320px;
+    height: 600px;
+    margin-top: 20px;
+  }
+ 
+  .form-field label {
+    padding: 10px;
+    color: #FFF;
+  }
+  
   
   .see-password-img {
     cursor: pointer;
@@ -145,46 +95,7 @@ dialog {
     font-size: 24px;
   }
   
-  .ask-for-login-message  {
-    text-align: center;
-    margin-bottom: 25px;
-  }
 
-  .ask-for-login-message span {
-    color: #fad00c;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 10px;
-  }
-  
-  .login-input {
-    margin-top: 5px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    color: #333;
-    /* font-size: 1em; */
-    width: 100%;
-    outline: none;
-  }
-  
-  .login-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* margin-bottom: 50px; */
-  }
-  
-    .login-header img {
-      width: 70px;
-  } 
-  
-   .login-header h1 {
-    /* color: #333; */
-    font-size: 1.5rem;
-  } 
-  
   .clear {
     background-color: #ee665c;
     border: none;
@@ -221,18 +132,6 @@ dialog {
     padding-left: 12px;
     color: #ee665c;
     display: none;
-  }
-
-  .span-login {
-    color: #FFF;
-    padding: 10px;
-  }
-
-  .span-login a {
-    color: #ee665c;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
   }
 
   .buttonInClose, .buttonUpClose {
