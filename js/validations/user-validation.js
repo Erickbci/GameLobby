@@ -20,7 +20,7 @@ gameButtonCsgo.addEventListener('click', (eve) => {
                 window.location.href = '../../pages/ticTacToe/index.html';
             }
         } else {
-            alert('Please loggin')
+            askForLogin()
         }
     })
 })
@@ -31,7 +31,7 @@ gameButtonRickAndMorty.addEventListener('click', (eve) => {
                 window.location.href = '../../pages/rickAndMortyGame/index.html';
             }
         } else {
-            alert('Please loggin')
+            askForLogin()
         }
     })
 })

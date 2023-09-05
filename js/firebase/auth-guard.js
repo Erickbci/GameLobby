@@ -3,3 +3,5 @@ firebase.auth().onAuthStateChanged(user => {
       window.location.href = '../../index.html';
     }
   })
+
+  

@@ -36,7 +36,6 @@ function connectedUserSettings() {
   
 }
 
-
 function login(){
   
   showLoading();

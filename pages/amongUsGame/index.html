@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="./styles/among.css">
     <link rel="stylesheet" href="./styles/rules.css">
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="../../css/header/header.css">
     <link rel="stylesheet" href="../../css/footer/footer.css">
-    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/modal/logout-modal.css">
+
+
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+    <script defer src="../../js/firebase/firebase.js"></script>
+    <script defer src="../../js/firebase/auth-guard.js"></script>
+    <script defer src="../../js/modal/logout.js"></script>
+    <script defer src="js/index.js"></script>
     <title>Start Reactor</title>
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="index.html">
+        <a href="../../index.html">
           <h1>Game Lobby</h1>
           <img src="/images/game-logo.svg" alt="">
         </a>
@@ -25,6 +34,23 @@
         
       </div>
   </header>
+  <dialog class="logout-modal">
+    <div>
+
+      <div class="login-header">
+        <img src="/images/game-logo.svg" alt="Logo Icon">
+        <h1>Game Lobby</h1>
+      </div>
+
+      <div class="logout-confirm">
+        <span class="logout-span">Deseja sair?</span>
+        <div class="logout-buttons">
+          <button onclick="logOut()" class="confirm-button">Sim</button>
+          <button class="undo-button">Não</button>
+        </div>
+      </div>
+    </div>
+</dialog>
     <main>
       <h1 id="title">START REACTOR</h1>
       <div class="container">
@@ -89,9 +115,8 @@
 
     <footer>
       <div>
-        
+        <h3>&copy;2023 direitos reservados</h3> 
       </div>
-      <h3>&copy;2023 direitos reservados</h3> 
 
       <ul>
         <li>
@@ -113,7 +138,7 @@
       
     </footer>
 
-    <script src="js/index.js"></script>
+    
     <script>
       const loadButton = document.getElementById("loadButton")
       const startButton = document.getElementById("startButton")
