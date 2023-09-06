@@ -16,6 +16,7 @@ function confirmLogout() {
     slider.style.display = 'none'
 
     undoButton.addEventListener('click', () => {
+        slider.style.display = 'flex'
         logoutModal.close()
     })
 }

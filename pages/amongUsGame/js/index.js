@@ -1,24 +1,4 @@
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      setUserSettingsAmong()
-    }
-  })
 
-  function setUserSettingsAmong() {
-    const user = firebase.auth().currentUser;
-    const connectedUserSettingsDiv = document.querySelector('.connected-user-settings-div');
-  
-    if (user !== null) {
-      user.providerData.forEach((profile) => {
-        const userEmail = profile.email;
-        connectedUserSettingsDiv.style.display = 'flex'
-        connectedUserSettingsDiv.innerHTML = `
-        <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
-        <a onclick="confirmLogout()"><img class="logout-button icon" src="../../images/logout.svg" /></a>`
-      });
-    }
-    
-  }
 
 
 startReactor = {

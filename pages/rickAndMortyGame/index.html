@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +7,84 @@
   <!-- CSS LINKS -->
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="../../css/index.css">
+  <link rel="stylesheet" href="../../css/header/header.css">
+  <link rel="stylesheet" href="../../css/footer/footer.css">
+  <link rel="stylesheet" href="../../css/modal/logout-modal.css">
   
   <!-- JS SRC -->
   <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
   <script defer src="../../js/firebase/firebase.js"></script>
+  <script defer src="../../js/modal/logout.js"></script>
   <script defer src="../../js/firebase/auth-guard.js"></script>
   <script defer src="./js/index.js"></script>
-
+  <script defer src="../../js/validations/user-validation.js"></script>
+  
   <title>Memory Game</title>
 </head>
 <body>
-  <main>
-    <header>
-      <span class="player"></span>
-      <span>Tempo: <span class="timer">00</span></span>
-      <span class="log-out" onclick="logOut()">Sair</span>
-    </header>
+  <header>
+    <div class="logo">
+      <a href="../../index.html">
+        <h1>Game Lobby</h1>
+        <img src="/images/game-logo.svg" alt="">
+      </a>
+      
+    </div>
 
+    <div class="connected-user-settings-div">
+      
+    </div>
+  </header>
+  <main>
+    <dialog class="logout-modal">
+      <div>
+
+        <div class="login-header">
+          <img src="/images/game-logo.svg" alt="Logo Icon">
+          <h1>Game Lobby</h1>
+        </div>
+
+        <div class="logout-confirm">
+          <span class="logout-span">Deseja sair?</span>
+          <div class="logout-buttons">
+            <button onclick="logOut()" class="confirm-button">Sim</button>
+            <button class="undo-button">Não</button>
+          </div>
+        </div>
+      </div>
+  </dialog>
     <div class="grid"></div>
+    <div class="game-header">
+      <span>Tempo: <span class="timer">00</span></span>
+    </div>
     <form class="game-form">
       <button class="ranking-button">Ver ranking</button>
       <button class="new-game-button">Jogar Novamente</button>
     </form>
   </main>
+
+  <footer>
+    <h3>&copy;2023 direitos reservados</h3> 
+
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/erick-batista-34a410200/">
+            <img class="icon" src="../../images/linkedin.svg" alt="Linkedln">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/erick.batista4/">
+            <img class="icon" src="../../images/instagram.svg" alt="Instagram">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Erickbci">
+            <img class="icon" src="../../images/github.svg" alt="GitHub">
+          </a>
+        </li>
+      </ul>
+  </footer>
 </body>
 </html>

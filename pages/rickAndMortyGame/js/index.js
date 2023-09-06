@@ -1,8 +1,5 @@
 const grid = document.querySelector('.grid');
-const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
-const buttonReset = document.querySelector('.new-game-button');
-const buttonRanking = document.querySelector('.ranking-button');
 
 const characters = [
   'beth',
@@ -109,21 +106,20 @@ const startTimer = () => {
   },1000)
 }
 
-const routeRanking = (event) => {
-  event.preventDefault();
-  window.location.href = '../../pages/ranking/ranking.html';
-}
+// const routeRanking = (event) => {
+//   event.preventDefault();
+//   window.location.href = '../../pages/ranking/ranking.html';
+// }
 
-const resetGame = (event) => {
-  event.preventDefault();
-  window.location.reload();
-}
+// const resetGame = (event) => {
+//   event.preventDefault();
+//   window.location.reload();
+// }
 
-buttonReset.addEventListener('click', resetGame);
-buttonRanking.addEventListener('click', routeRanking);
+// buttonReset.addEventListener('click', resetGame);
+// buttonRanking.addEventListener('click', routeRanking);
 
 window.onload = () => {
-  spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   loadGame();
 }
