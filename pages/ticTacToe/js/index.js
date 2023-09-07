@@ -53,6 +53,8 @@ function handleWin(regions) {
     })
     const playerName = document.getElementById(turnPlayer).value
     document.querySelector('h2').innerHTML = `<span id="turnPlayer">${playerName}</span> venceu`
+    const span = document.querySelectorAll('.cursor-pointer')
+    span.style.cursor = 'not-allowed'
 }
 
 function handleBoardClick(ev) {
@@ -63,10 +65,10 @@ function handleBoardClick(ev) {
     const column = rowColumnPair[1]
 
     if (turnPlayer === 'player1') {
-        span.innerText = 'X'
+        span.innerHTML = '<img class="span-image" src="../../../../images/trTicTacToe.png">' 
         vBoard[row][column] = 'X'
     } else {
-        span.innerText = 'O'
+        span.innerHTML = '<img class="span-image" src="../../../../images/ctTicTacToe.png">' 
         vBoard[row][column] = 'O'
     }
 
