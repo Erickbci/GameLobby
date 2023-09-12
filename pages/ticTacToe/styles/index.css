@@ -1,82 +1,113 @@
-    main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    /* max-width: 300px; */
-    height: 85vh;
-    margin: auto;
-    /* padding: 20px 20px 50px; */
-    background-image: url('../../../images/csgo-background.png');
-    background-size: cover;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 300px; */
+  height: 85vh;
+  margin: auto;
+  /* padding: 20px 20px 50px; */
+  background-image: url("../../../images/csgo-background.png");
+  background-size: cover;
+}
 
-  .game-header {
-    margin: 32px;
-    text-align: center;
-  }
+.game-header {
+  margin: 32px;
+  text-align: center;
+}
 
-  label {
-    padding: 8px;
-  }
+#playerBoard {
+  text-align: center;
+  width: 250px;
+}
 
-  input {
-    margin: 5px 0px 5px 0px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    color: #333;
-    /* font-size: 1em; */
-    width: 100%;
-    outline: none;
-  }
+#start {
+  background-color: #00ff37;
+  color: #25a340;
+  border-radius: 4px;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  width: 200px;
+}
 
-  button {
-    margin: 20px 0px;
-    font-size: 16px;
-    font-weight: 600;
-  }
+#start:hover {
+  color: #FFF;
+  cursor: pointer;
+}
 
-  h2 {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  #turnPlayer {
-    display: block;
-    margin: 10px 0px;
-  }
-
-  #gameBoard {
-    background: transparent;
-    display: grid;
-    grid-template-columns: 6rem 6rem 6rem;
-    grid-template-rows: 6rem 6rem 6rem;
-    gap: .5rem;
-    margin-bottom: 1.5rem;
-    max-width: 19rem;
-    margin-top: 20px;
-    
-  }
+.label-ct {
+  color: #1e2b33;
   
-  #gameBoard span {
-    background-color: #ddd;
-    /* opacity: 0; */
-    display: grid;
-    place-content: center;
-    font-size: 5rem;
-    
-  }
-  
-  #gameBoard span.win {
-    border: 3px solid #25a340;
-  }
-  
-  .cursor-pointer {
-    cursor: pointer;
-  }
+}
 
-  .span-image {
-    width: 100%;
-    height: 100%;
-  }
+.label-tr {
+  color: #87614b;
+}
+
+label {
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 700;
+}
+
+input {
+  margin: 5px 0px 5px 0px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #333;
+  /* font-size: 1em; */
+  width: 100%;
+  outline: none;
+}
+
+button {
+  margin: 20px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+  color: #222; 
+}
+
+#turnPlayer {
+  display: block;
+  margin: 10px 0px;
+}
+
+#gameBoard {
+  background: transparent;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 19rem;
+  margin-top: 20px;
+}
+
+#gameBoard span {
+  background-color: #ddd;
+  /* opacity: 0; */
+  display: grid;
+  place-content: center;
+  font-size: 5rem;
+}
+
+#gameBoard span.win {
+  border: 3px solid #25a340;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.span-image {
+  width: 100%;
+  height: 100%;
+}
