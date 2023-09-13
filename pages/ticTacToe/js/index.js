@@ -2,6 +2,27 @@ const boardRegions = document.querySelectorAll('#gameBoard span');
 let vBoard = []
 let turnPlayer = ''
 
+
+const startButton = document.getElementById('start')
+
+function onChangeInputs() {
+    toggleButtonDisable();
+}
+
+function isInputValid() {
+    const inputPlayer1 = document.getElementById('player1').value
+    const inputPlayer2 = document.getElementById('player2').value
+    if(!inputPlayer1 || !inputPlayer2) {
+        return false
+    }
+    return true
+}
+
+function toggleButtonDisable() {
+    const inputValid = isInputValid()
+    startButton.disabled = !inputValid
+}
+
 function updateTitle() {
     const playerInput = document.getElementById(turnPlayer)
     document.getElementById('turnPlayer').innerText = playerInput.value

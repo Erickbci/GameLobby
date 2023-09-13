@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html translate="no">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
 
   <header>
         <div class="logo">
-          <a href="index.html">
+          <a href="../../index.html">
             <h1>Game Lobby</h1>
             <img src="/images/game-logo.svg" alt="">
           </a>
@@ -45,12 +45,12 @@
         <div class="label-ct">
           <label for="player1">Contra-Terrorista</label>
         </div>
-        <input type="text" id="player1" placeholder="Nome do Jogador 1">
+        <input onchange="onChangeInputs()" type="text" id="player1" placeholder="Nome do Jogador 1">
         <div class="label-tr">
           <label for="player2">Terrorista</label>
         </div>
-        <input type="text" id="player2" placeholder="Nome do Jogador 2">
-        <button id="start">Começar!</button>
+        <input onchange="onChangeInputs()" type="text" id="player2" placeholder="Nome do Jogador 2">
+        <button id="start" disabled>Começar!</button>
         <h2>Vez de: <span id="turnPlayer"></span></h2>
       </section>
       <section id="gameBoard">
