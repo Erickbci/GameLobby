@@ -1,4 +1,6 @@
 const boardRegions = document.querySelectorAll('#gameBoard span');
+const gameBoard = document.getElementById('gameBoard')
+
 const startButton = document.getElementById('start')
 let vBoard = []
 let turnPlayer = ''
@@ -73,11 +75,15 @@ function handleWin(regions) {
     })
     const playerName = document.getElementById(turnPlayer).value
     document.querySelector('h2').innerHTML = `<span id="turnPlayer">${playerName}</span> venceu`
-    const span = document.querySelectorAll('.cursor-pointer')
-    span.style.cursor = 'not-allowed'
+    const gameBoard = document.getElementById('gameBoard')
+    gameBoard.classList.add('finished')
+    startButton.disabled = false
 }
 
 function handleBoardClick(ev) {
+    if (gameBoard.classList.contains('finished')) {
+        return false
+    }
     const span = ev.currentTarget
     const region = span.dataset.region
     const rowColumnPair = region.split('.')

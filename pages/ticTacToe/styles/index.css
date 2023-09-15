@@ -12,6 +12,10 @@ main {
   background-size: cover;
 }
 
+.finished {
+  cursor: not-allowed;
+}
+
 #start {
   background: #4cb050;
   padding: 20px 40px;
