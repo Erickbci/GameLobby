@@ -1,9 +1,7 @@
 const boardRegions = document.querySelectorAll('#gameBoard span');
+const startButton = document.getElementById('start')
 let vBoard = []
 let turnPlayer = ''
-
-
-const startButton = document.getElementById('start')
 
 function onChangeInputs() {
     toggleButtonDisable();
@@ -20,7 +18,7 @@ function isInputValid() {
 
 function toggleButtonDisable() {
     const inputValid = isInputValid()
-    startButton.disabled = !inputValid
+    startButton.disabled = !inputValid  
 }
 
 function updateTitle() {
@@ -29,6 +27,7 @@ function updateTitle() {
 }
 
 function initializeGame() {
+    startButton.disabled = true
     vBoard = [['', '', ''],['', '', ''],['', '', '']]
     turnPlayer = 'player1'
     document.querySelector('h2').innerHTML = 'Vez de: <span id="turnPlayer"></span>'
