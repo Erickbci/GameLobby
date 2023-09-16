@@ -29,6 +29,7 @@ function updateTitle() {
 }
 
 function initializeGame() {
+    gameBoard.classList.remove('finished')
     startButton.disabled = true
     vBoard = [['', '', ''],['', '', ''],['', '', '']]
     turnPlayer = 'player1'
@@ -110,6 +111,9 @@ function handleBoardClick(ev) {
         updateTitle();
     } else {
         document.querySelector('h2').innerHTML = 'Empate'
+        gameBoard.classList.add('finished')
+        startButton.disabled = false
+
     }
 }
 
