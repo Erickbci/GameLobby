@@ -133,6 +133,7 @@ function handleBoardClick(ev) {
     } else {
         document.querySelector('h2').innerHTML = 'Empate'
         gameBoard.classList.add('finished')
+        readyAudio1.play()
         startButton.disabled = false
 
     }
