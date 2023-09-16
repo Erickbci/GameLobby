@@ -38,18 +38,24 @@
         </div>
     </header>
     <main>
+      <audio id="select-team-audio" src="./audio/select.mp3"></audio>
+      <audio id="bomb-has-been-planted-audio" src="./audio/bombplanted.mp3"></audio>
+      <audio id="ready-audio1" src="./audio/ready1.mp3"></audio>
+      <audio id="ready-audio2" src="./audio/ready2.mp3"></audio>
+      <audio id="ct-win-audio" src="./audio/ctwin.mp3"></audio>
+      <audio id="tr-win-audio" src="./audio/trwin.mp3"></audio>
     <div class="game-header">
       <h1>Jogo da Velha</h1>
     </div>
       <section id="playerBoard">
-        <div class="label-ct">
-          <label for="player1">Contra-Terrorista</label>
-        </div>
-        <input onchange="onChangeInputs()" type="text" id="player1" placeholder="Nome do Jogador 1">
         <div class="label-tr">
-          <label for="player2">Terrorista</label>
+          <label for="player1">Terrorista</label>
         </div>
-        <input onchange="onChangeInputs()" type="text" id="player2" placeholder="Nome do Jogador 2">
+        <input type="text" id="player1" placeholder="Nome do Jogador 1">
+        <div class="label-ct">
+          <label for="player2">Contra-Terrorista</label>
+        </div>
+        <input type="text" id="player2" placeholder="Nome do Jogador 2">
         <button id="start" class="start-button" disabled>
           <span></span>
           <span></span>

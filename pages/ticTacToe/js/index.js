@@ -1,13 +1,26 @@
+let chooseTeamAudio = document.getElementById('select-team-audio')
+let readyAudio1 = document.getElementById('ready-audio1')
+let readyAudio2 = document.getElementById('ready-audio2')
+let bombHasBeenPlantedAudio = document.getElementById('bomb-has-been-planted-audio')
+let ctWinAudio = document.getElementById('ct-win-audio')
+let trWinAudio = document.getElementById('tr-win-audio')
+chooseTeamAudio.play()
+
+
 const boardRegions = document.querySelectorAll('#gameBoard span');
 const gameBoard = document.getElementById('gameBoard')
-
 const startButton = document.getElementById('start')
+
 let vBoard = []
 let turnPlayer = ''
 
 function onChangeInputs() {
+    chooseTeamAudio.pause()
+    readyAudio1.play()
     toggleButtonDisable();
 }
+
+document.getElementById('player2').addEventListener('change', onChangeInputs)
 
 function isInputValid() {
     const inputPlayer1 = document.getElementById('player1').value
@@ -29,6 +42,8 @@ function updateTitle() {
 }
 
 function initializeGame() {
+    readyAudio1.pause()
+    bombHasBeenPlantedAudio.play()
     gameBoard.classList.remove('finished')
     startButton.disabled = true
     vBoard = [['', '', ''],['', '', ''],['', '', '']]
@@ -74,11 +89,17 @@ function handleWin(regions) {
     regions.forEach((region) => {
         document.querySelector(`[data-region="${region}"]`).classList.add('win')
     })
-    const playerName = document.getElementById(turnPlayer).value
-    document.querySelector('h2').innerHTML = `<span id="turnPlayer">${playerName}</span> venceu`
+    const playerName = document.getElementById(turnPlayer)
+    if (playerName.id == 'player1'){
+        trWinAudio.play()
+    } else {
+        ctWinAudio.play()
+    }
+    document.querySelector('h2').innerHTML = `<span id="turnPlayer">${playerName.value}</span> venceu`
     const gameBoard = document.getElementById('gameBoard')
     gameBoard.classList.add('finished')
     startButton.disabled = false
+    readyAudio1.play()
 }
 
 function handleBoardClick(ev) {
