@@ -25,10 +25,12 @@ let secondCard = '';
 
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
+  console.log('checking');
   if (disabledCards.length == 20) {
+    console.log('checked');
     clearInterval(this.loop)
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`)
-    localStorage.setItem('score', timer.innerHTML);
+    alert(`Parabéns! Seu tempo foi: ${timer}`)
+    // localStorage.setItem('score', timer.innerHTML);
   } 
 }
 
