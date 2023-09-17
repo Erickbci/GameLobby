@@ -1,6 +1,28 @@
 const grid = document.querySelector('.grid');
 const timer = document.querySelector('.timer');
 
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    setUserSettingsCsgo()
+  }
+})
+
+function setUserSettingsCsgo() {
+  const user = firebase.auth().currentUser;
+  const connectedUserSettingsDivcsgo = document.querySelector('.connected-user-settings-div');
+
+  if (user !== null) {
+    user.providerData.forEach((profile) => {
+      const userEmail = profile.email;
+      connectedUserSettingsDivcsgo.style.display = 'flex'
+      connectedUserSettingsDivcsgo.innerHTML = `
+      <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
+      <a onclick="confirmLogout()"><img class="logout-button icon" src="../../../images/logout.svg" /></a>`
+    });
+  }
+  
+}
+
 const characters = [
   'beth',
   'jerry',
