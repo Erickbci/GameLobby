@@ -3,19 +3,19 @@ const timer = document.querySelector('.timer');
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
-    setUserSettingsCsgo()
+    setUserSettingsRick()
   }
 })
 
-function setUserSettingsCsgo() {
+function setUserSettingsRick() {
   const user = firebase.auth().currentUser;
-  const connectedUserSettingsDivcsgo = document.querySelector('.connected-user-settings-div');
+  const connectedUserSettingsDivRick = document.querySelector('.connected-user-settings-div');
 
   if (user !== null) {
     user.providerData.forEach((profile) => {
       const userEmail = profile.email;
-      connectedUserSettingsDivcsgo.style.display = 'flex'
-      connectedUserSettingsDivcsgo.innerHTML = `
+      connectedUserSettingsDivRick.style.display = 'flex'
+      connectedUserSettingsDivRick.innerHTML = `
       <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
       <a onclick="confirmLogout()"><img class="logout-button icon" src="../../../images/logout.svg" /></a>`
     });

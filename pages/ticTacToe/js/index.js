@@ -7,6 +7,28 @@ let trWinAudio = document.getElementById('tr-win-audio')
 chooseTeamAudio.play()
 
 
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      setUserSettingsCsgo()
+    }
+  })
+  
+  function setUserSettingsCsgo() {
+    const user = firebase.auth().currentUser;
+    const connectedUserSettingsDivCsgo = document.querySelector('.connected-user-settings-div');
+  
+    if (user !== null) {
+      user.providerData.forEach((profile) => {
+        const userEmail = profile.email;
+        connectedUserSettingsDivCsgo.style.display = 'flex'
+        connectedUserSettingsDivCsgo.innerHTML = `
+        <span class="connected-span">Conectado, <span class="connected-user">${userEmail}</span></span>
+        <a onclick="confirmLogout()"><img class="logout-button icon" src="../../../images/logout.svg" /></a>`
+      });
+    }
+    
+  }
+
 const boardRegions = document.querySelectorAll('#gameBoard span');
 const gameBoard = document.getElementById('gameBoard')
 const startButton = document.getElementById('start')

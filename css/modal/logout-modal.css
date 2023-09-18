@@ -1,6 +1,7 @@
 .logout-modal {
   width: 300px;
-  height: 250px;
+  height: 260px;
+  padding: 16px;
 }
 
 .logout-confirm {
@@ -45,4 +46,8 @@
 
 .logout-buttons button:first-child {
   margin-right: 15px;
+}
+
+.login-header img {
+  width: 70px;
 }
