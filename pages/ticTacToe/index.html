@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS LINKS -->
+  <link rel="stylesheet" href="../../css/modal/logout-modal.css">
+  <link rel="stylesheet" href="../../css/modal/modal.css">
+  <link rel="stylesheet" href="../../css/modal/login-modal.css">
   <link rel="stylesheet" href="../../css/index.css">
   <link rel="stylesheet" href="./styles/index.css">
   <link rel="stylesheet" href="../../css/global.css">
@@ -13,9 +16,13 @@
   <link rel="stylesheet" href="../../css/header/header.css">
 
   <!-- JS SRC -->
-  <script src="../../js/firebase/auth-guard.js"></script>
-  <script src="../../js/firebase/firebase.js"></script>
-  <script src="./js/index.js" defer></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+  <script defer src="../../js/firebase/firebase.js"></script>
+  <script defer src="../../js/firebase/auth-guard.js"></script>
+  <script defer src="../../js/validations/user-validation.js"></script>
+  <script defer src="../../js/modal/logout.js"></script>
+  <script defer src="./js/index.js"></script>
 
 
   <title>Jogo da Velha</title>
@@ -30,16 +37,29 @@
           </a>
           
         </div>
-        
-        <div class="header-buttons" style="display: none;">
-            <button class="sign-in-button" role="button">Sign In</button>
-            <button class="sign-up-button" role="button">Sign Up</button>
-        </div>
 
-        <div class="connected-user-settings-div-csgo">
+        <div class="connected-user-settings-div">
           
         </div>
     </header>
+
+    <dialog class="logout-modal">
+      <div>
+        <div class="login-header">
+          <img src="/images/game-logo.svg" alt="Logo Icon">
+          <h1>Game Lobby</h1>
+        </div>
+
+        <div class="logout-confirm">
+          <span class="logout-span">Deseja sair?</span>
+          <div class="logout-buttons">
+            <button onclick="logOut()" class="confirm-button">Sim</button>
+            <button class="undo-button">Não</button>
+          </div>
+        </div>
+      </div>
+  </dialog>
+
     <main>
       <audio id="select-team-audio" src="./audio/select.mp3"></audio>
       <audio id="bomb-has-been-planted-audio" src="./audio/bombplanted.mp3"></audio>
