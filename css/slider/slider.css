@@ -4,6 +4,28 @@ a{
 
 }
 
+#disabled-game {
+    cursor: not-allowed;
+    width: 100%;
+    height: 60px;
+    margin: 35px auto;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--current-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    transition: all .7s ease;
+}
+
+#disabled-game:hover {
+    background-color: #ECEAED;
+}
+
 .input-slider {
 
     display: none;

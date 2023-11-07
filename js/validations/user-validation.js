@@ -1,6 +1,7 @@
 const gameButtonAmongUs = document.querySelector('#game-button-among-us');
 const gameButtonCsgo = document.querySelector('#game-button-csgo');
 const gameButtonRickAndMorty = document.querySelector('#game-button-rick-and-morty');
+const comingSoonButton = document.querySelector('#disabled-game')
 
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
