@@ -36,7 +36,7 @@ function register() {
         email, password
         ).then(() => {
             hideLoading();
-            window.location.href = '../../pages/game/game.html';
+            window.location.href = '../../index.html';
         }).catch(error => {
             hideLoading();
             alert(getErrorMessage(error));
