@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS LINKS -->
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="../../css/index.css">
-  <link rel="stylesheet" href="../../css/header/header.css">
-  <link rel="stylesheet" href="../../css/footer/footer.css">
-  <link rel="stylesheet" href="../../css/modal/logout-modal.css">
-  <link rel="stylesheet" href="../../css/modal/login-modal.css">
-  <link rel="stylesheet" href="../../css/modal/register-modal.css">
-  <link rel="stylesheet" href="../../css/modal/modal.css">
-  
-  <!-- JS SRC -->
-  <script defer src="../../js/validations/user-validation.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-  <script defer src="../../js/firebase/firebase.js"></script>
-  <script defer src="../../js/modal/logout.js"></script>
-  <script defer src="../../js/firebase/auth-guard.js"></script>
-  <script defer src="./js/index.js"></script>
-  
-  <title>Memory Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+    <link rel="stylesheet" href="../../css/description/index.css" />
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/footer/footer.css">
+    <link rel="stylesheet" href="../../css/modal/modal.css">
+    <link rel="stylesheet" href="../../css/modal/logout-modal.css">
+    <script defer src="../../js/routes/route-descriptions.js"></script>
+
+
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+    <script defer src="../../js/firebase/firebase.js"></script>
+    <!-- <script defer src="../../js/firebase/auth-guard.js"></script> -->
+    <script defer src="../../js/validations/user-validation.js"></script>
+    <script defer src="../../js/modal/logout.js"></script>
+    <!-- <script defer src="js/index.js"></script> -->
+    <title>R&M | Descrição</title>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="../../index.html">
-        <h1>Game Lobby</h1>
-        <img src="/images/game-logo.svg" alt="">
-      </a>
-      
-    </div>
-
-    <div class="connected-user-settings-div">
-      
-    </div>
-  </header>
-  <main>
+    <header>
+        <div class="logo">
+          <a href="../../index.html">
+            <h1>Game Lobby</h1>
+            <img src="/images/game-logo.svg" alt="">
+          </a>
+          
+        </div>
+  
+        <div class="connected-user-settings-div">
+          
+        </div>
+    </header>
     <dialog class="logout-modal">
       <div>
+  
         <div class="login-header">
           <img src="/images/game-logo.svg" alt="Logo Icon">
           <h1>Game Lobby</h1>
         </div>
-
+  
         <div class="logout-confirm">
           <span class="logout-span">Deseja sair?</span>
           <div class="logout-buttons">
@@ -57,39 +52,45 @@
         </div>
       </div>
   </dialog>
-  <div class="container">
-    <span class="time">Tempo: <span class="timer">00</span></span>
-    <div class="grid"></div>
-  </div> 
-    <!-- <div class="game-header">
-     
-    </div> -->
-    <!-- <form class="game-form">
-      <button class="ranking-button">Ver ranking</button>
-      <button class="new-game-button">Jogar Novamente</button>
-    </form> -->
+
+  <main>
+   <div class="container">
+    <div class="description-card-img"></div>
+    <h1>Rick And Morty</h1>
+    <p>
+        Rick And Morty é um jogo de memória baseado nos personagens da série Rick And Morty,<br>
+        onde o objetivo é encontrar os personagens duplicados.<br>
+        O jogo possui um sistema de contagem do tempo obtido ao finalizar.<br>
+        Desafie-se e tente quebrar seus recordes.<br>
+        Ao clicar em iniciar, o jogo começa e o timer inicia.<br>
+        Clique em iniciar para começar!
+    </p>
+    <button id="startButton">Começar!</button>
+   </div>
   </main>
 
   <footer>
     <h3>&copy;2023 direitos reservados</h3> 
 
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/erick-batista-34a410200/">
-            <img class="icon" src="../../images/linkedin.svg" alt="Linkedln">
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/erick.batista4/">
-            <img class="icon" src="../../images/instagram.svg" alt="Instagram">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Erickbci">
-            <img class="icon" src="../../images/github.svg" alt="GitHub">
-          </a>
-        </li>
-      </ul>
-  </footer>
+  <ul>
+    <li>
+      <a href="https://www.linkedin.com/in/erick-batista-34a410200/">
+        <img class="icon" src="../../images/linkedin.svg" alt="Linkedln">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/erickcinigaliadev/">
+        <img class="icon" src="../../images/instagram.svg" alt="Instagram">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/Erickbci">
+        <img class="icon" src="../../images/github.svg" alt="GitHub">
+      </a>
+    </li>
+  </ul> 
+  
+</footer>
+
 </body>
 </html>

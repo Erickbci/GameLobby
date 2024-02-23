@@ -6,6 +6,21 @@
   /* width: 100%; */
   
 /* } */
+
+.description-card-img {
+  background-image: url(../../../images/rick.jpg);
+  background-size: cover;
+  background-position: 20% 10%;
+  border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 86%;
+    height: 220px;
+    object-fit: cover;
+    transition: all .7s;
+}
+
 .container {
   padding-bottom: 25px;
   display: flex;

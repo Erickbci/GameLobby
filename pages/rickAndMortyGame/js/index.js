@@ -1,6 +1,12 @@
 const grid = document.querySelector('.grid');
 const timer = document.querySelector('.timer');
 
+// const startButton = document.getElementById('startButton');
+
+// startButton.addEventListener('click', (eve) => {
+//     window.location.href = 'game.html';
+// })
+
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     setUserSettingsRick()
@@ -51,7 +57,7 @@ const checkEndGame = () => {
   if (disabledCards.length == 20) {
     console.log('checked');
     clearInterval(this.loop)
-    alert(`Parabéns! Seu tempo foi: ${timer}`)
+    alert(`Parabéns! Seu tempo foi: ${timer.innerHTML} segundos`)
     // localStorage.setItem('score', timer.innerHTML);
   } 
 }
