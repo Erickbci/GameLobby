@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-<html translate="no">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS LINKS -->
-  <link rel="stylesheet" href="../../css/modal/logout-modal.css">
-  <link rel="stylesheet" href="../../css/modal/modal.css">
-  <link rel="stylesheet" href="../../css/modal/login-modal.css">
-  <link rel="stylesheet" href="../../css/index.css">
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/footer/footer.css">
-  <link rel="stylesheet" href="../../css/header/header.css">
-
-  <!-- JS SRC -->
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-  <script defer src="../../js/firebase/firebase.js"></script>
-  <script defer src="../../js/firebase/auth-guard.js"></script>
-  <script defer src="../../js/validations/user-validation.js"></script>
-  <script defer src="../../js/modal/logout.js"></script>
-  <script defer src="./js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+    <link rel="stylesheet" href="../../css/description/index.css" />
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/footer/footer.css">
+    <link rel="stylesheet" href="../../css/modal/modal.css">
+    <link rel="stylesheet" href="../../css/modal/logout-modal.css">
+    <script defer src="../../js/routes/route-descriptions.js"></script>
 
 
-  <title>Jogo da Velha</title>
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+    <script defer src="../../js/firebase/firebase.js"></script>
+    <!-- <script defer src="../../js/firebase/auth-guard.js"></script> -->
+    <script defer src="../../js/validations/user-validation.js"></script>
+    <script defer src="../../js/modal/logout.js"></script>
+    <!-- <script defer src="js/index.js"></script> -->
+    <title>CSGO | Descrição</title>
 </head>
 <body>
-
-  <header>
+    <header>
         <div class="logo">
           <a href="../../index.html">
             <h1>Game Lobby</h1>
@@ -37,19 +30,19 @@
           </a>
           
         </div>
-
+  
         <div class="connected-user-settings-div">
           
         </div>
     </header>
-
     <dialog class="logout-modal">
       <div>
+  
         <div class="login-header">
           <img src="/images/game-logo.svg" alt="Logo Icon">
           <h1>Game Lobby</h1>
         </div>
-
+  
         <div class="logout-confirm">
           <span class="logout-span">Deseja sair?</span>
           <div class="logout-buttons">
@@ -60,71 +53,42 @@
       </div>
   </dialog>
 
-    <main>
-      <audio id="select-team-audio" src="./audio/select.mp3"></audio>
-      <audio id="bomb-has-been-planted-audio" src="./audio/bombplanted.mp3"></audio>
-      <audio id="ready-audio1" src="./audio/ready1.mp3"></audio>
-      <audio id="ready-audio2" src="./audio/ready2.mp3"></audio>
-      <audio id="ct-win-audio" src="./audio/ctwin.mp3"></audio>
-      <audio id="tr-win-audio" src="./audio/trwin.mp3"></audio>
-    <div class="game-header">
-      <h1>Jogo da Velha</h1>
-    </div>
-      <section id="playerBoard">
-        <div class="label-tr">
-          <label for="player1">Terrorista</label>
-        </div>
-        <input type="text" id="player1" placeholder="Nome do Jogador 1">
-        <div class="label-ct">
-          <label for="player2">Contra-Terrorista</label>
-        </div>
-        <input type="text" id="player2" placeholder="Nome do Jogador 2">
-        <button id="start" class="start-button" disabled>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Começar
-          
-        </button>
-        <!-- <button id="start" disabled>Começar!</button> -->
-        <h2>Vez de: <span id="turnPlayer"></span></h2>
-      </section>
-      <section id="gameBoard">
-        <span class="cursor-pointer" data-region="0.0"></span>
-        <span class="cursor-pointer" data-region="0.1"></span>
-        <span class="cursor-pointer" data-region="0.2"></span>
-        <span class="cursor-pointer" data-region="1.0"></span>
-        <span class="cursor-pointer" data-region="1.1"></span>
-        <span class="cursor-pointer" data-region="1.2"></span>
-        <span class="cursor-pointer" data-region="2.0"></span>
-        <span class="cursor-pointer" data-region="2.1"></span>
-        <span class="cursor-pointer" data-region="2.2"></span>
-      </section>
-    </main>
+  <main>
+   <div class="container">
+    <div class="description-card-img csgo"></div>
+    <h1>CSGO Tic Tac Toe</h1>
+    <p>
+        CSGO Tic Tac Toe é o clássico jogo da velha baseado nos times do jogo Counter Strike,<br>
+        Escolha seu lado, terrorista ou contra-terrorista.<br>
+        Um jogo ótimo para desafiar um amigo e criar táticas.<br>
+        Clique em iniciar para começar!
+    </p>
+    <button id="startButton">Começar!</button>
+   </div>
+  </main>
+
+  <footer>
+    <h3>&copy;2023 direitos reservados</h3> 
+
+  <ul>
+    <li>
+      <a href="https://www.linkedin.com/in/erick-batista-34a410200/">
+        <img class="icon" src="../../images/linkedin.svg" alt="Linkedln">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/erickcinigaliadev/">
+        <img class="icon" src="../../images/instagram.svg" alt="Instagram">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/Erickbci">
+        <img class="icon" src="../../images/github.svg" alt="GitHub">
+      </a>
+    </li>
+  </ul> 
   
-    <footer>
+</footer>
 
-      <h3>&copy;2023 direitos reservados</h3> 
-
-      <ul class="footer-ul">
-        <li class="footer-li">
-          <a href="https://www.linkedin.com/in/erick-batista-34a410200/">
-            <img class="icon" src="../../../images/linkedin.svg" alt="Linkedln">
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/erick.batista4/">
-            <img class="icon" src="../../../images/instagram.svg" alt="Instagram">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Erickbci">
-            <img class="icon" src="../../../images/github.svg" alt="GitHub">
-          </a>
-        </li>
-      </ul> 
-    
-  </footer>
 </body>
 </html>

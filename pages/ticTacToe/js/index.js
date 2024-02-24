@@ -1,10 +1,8 @@
-let chooseTeamAudio = document.getElementById('select-team-audio')
 let readyAudio1 = document.getElementById('ready-audio1')
 let readyAudio2 = document.getElementById('ready-audio2')
 let bombHasBeenPlantedAudio = document.getElementById('bomb-has-been-planted-audio')
 let ctWinAudio = document.getElementById('ct-win-audio')
 let trWinAudio = document.getElementById('tr-win-audio')
-chooseTeamAudio.play()
 
 const boardRegions = document.querySelectorAll('#gameBoard span');
 const gameBoard = document.getElementById('gameBoard')

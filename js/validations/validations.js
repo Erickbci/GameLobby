@@ -2,6 +2,10 @@ function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
+const gameButtonAmongUs = document.querySelector('#game-button-among-us');
+const gameButtonCsgo = document.querySelector('#game-button-csgo');
+const gameButtonRickAndMorty = document.querySelector('#game-button-rick-and-morty');
+
 gameButtonAmongUs.addEventListener('click', (eve) => {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {

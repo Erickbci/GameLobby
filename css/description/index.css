@@ -4,7 +4,7 @@ body {
 }
 
 .description-card-img {
-    background-image: url(../../../images/rick.jpg);
+    /* background-image: url(../../../images/rick.jpg); */
     background-size: cover;
     background-position: 20% 10%;
     border-radius: 5px;
@@ -15,6 +15,10 @@ body {
       height: 220px;
       object-fit: cover;
       transition: all .7s;
+  }
+.csgo{
+    background-image: url(../../../images/csgo.png);
+    background-position: 20% 35%;
   }
 
 .container {
